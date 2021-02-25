@@ -25,4 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
     [width, width + 1, width + 2, width * 2 + 1],
     [1, width, width + 1, width * 2 + 1],
   ];
+
+  const itetromino = [
+    [1, width + 1, width * 2 + 1, width * 3 + 1],
+    [width, width + 1, width + 2, width + 3],
+    [1, width + 1, width * 2 + 1, width * 3 + 1],
+    [width, width + 1, width + 2, width + 3],
+  ];
 });
