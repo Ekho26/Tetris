@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const scoreDisplay = document.querySelector("#score");
   const startBtn = document.querySelector("#start-button");
   let nextRandom = 0;
+  let setTimer
 
   const lTetromino = [
     [1, width + 1, width * 2 + 1, 2],
@@ -66,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  setTimer = setInterval(moveDown, 500);
+//   setTimer = setInterval(moveDown, 500);
 
   function controls(e){
       if(e.keyCode === 37){
@@ -171,4 +172,16 @@ document.addEventListener("DOMContentLoaded", () => {
           displaySquares[displayIndex+index].classList.add('tetromino')
       })
   }
+
+  startBtn.addEventListener('click', ()=>{
+      if(setTimer) {
+          clearInterval(setTimer)
+          setTimer = null
+      }else{
+          draw()
+          setTimer = setInterval(moveDown,500)
+          nextRandom = Math.floor(Math.random()*fiveTetromino.lenngth)
+          displayShape()
+      }
+  })
 });
