@@ -14,6 +14,13 @@ document.addEventListener('DOMContentLoaded',() => {
     ];
 
     const zTetromino = [
-        []
+      [width * 2, width * 2 + 1, width + 1, width + 2],
+      [0, width, width + 1, width * 2],
+      [width * 2, width * 2 + 1, width + 1, width + 2],
+      [0, width, width + 1, width * 2],
+    ];
+
+    const tTetromino = [
+        
     ]
 })
